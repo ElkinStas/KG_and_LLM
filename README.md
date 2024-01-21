@@ -1,13 +1,11 @@
 KG_and_LLM
-Исследовательский проект по исследованию работы графов знаний и использованию их совместно с языковыми моделями.
-Рост популярности LLM породил новые сферы связанные с работой и исследованиями вокруг них. Одной из таких сфер является (RAG), или Retrieval Augmented Generation.
-RAG позволяет подключать к моделям память, и дает им возможность работать с новыми фактами не затронутыми при обучении. 
-На текущий момент RAG'и только начинают свое развитие, и одним из перспективных баз для RAG'а являются графы знаний. 
-Наше исследование затронет то, как мы можем совмещать LLM и KG для построения перспективного RAG.
+A research project aimed at investigating the functioning of knowledge graphs and their combined utilization with language models.
 
-Изначально нашей задумкой было строить RAG на базе графов знаний для строительной документации, но в итоге увидив перспективы наша задача перенеслась в более исследовательскую плоскость, и мы начали подробный обзор литературы и научных ресурсов связанных с постройкой графов знаний и RAG.
+The growing popularity of Large Language Models (LLMs) has given rise to new areas of work and research. One such area is Retrieval Augmented Generation (RAG), which allows models to connect with memory and work with new facts not covered during training.
 
-Для начала мы проанализировали большое количество научных статей связанных с постройкой графа знаний.
+At present, RAGs are in the early stages of development, and one of the promising foundations for RAG is knowledge graphs (KGs). Our research will delve into how we can integrate LLMs and KGs to build a prospective RAG.
+
+Initially, our concept was to construct a RAG based on knowledge graphs for construction documentation. However, as we recognized the potential, our focus shifted towards a more research-oriented approach. We began an in-depth review of literature and scientific resources related to the construction of knowledge graphs and RAG.
 
 | Link                                                                                   | Name                                                                                           | Summary                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 |----------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -26,11 +24,13 @@ RAG позволяет подключать к моделям память, и �
 | [Arxiv Paper](https://arxiv.org/pdf/2109.06067.pdf)                                    | Packed Levitated Marker for Entity and Relation Extraction                                      | Describes the Packed Levitated Marker method for ERE data labeling. The code is functional, and metrics are confirmed. It's difficult to say whether it should be used in our work.                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | [GitHub - REBEL](https://github.com/Babelscape/rebel/blob/main/docs/EMNLP_2021_REBEL__Camera_Ready_.pdf) | REBEL: Relation Extraction By End-to-end Language generation                                   | REBEL, a seq2seq model based on BART, performs end-to-end relation extraction for over 200 different relation types. It works excellently and is currently in use.                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 
-После 2х месяцев изучения графов знаний, и научных статей мы пришли к выводу, что будет ценно построить RAG на графах знаний. Сравнить его по сравнению с обычным RAG на векторной базе, и попробовать обернуть это все в библиотеку либо научную статью.
+After two months of studying knowledge graphs and scientific articles, we have come to the conclusion that it would be valuable to build a Retrieval Augmented Generation (RAG) model based on knowledge graphs. We plan to compare it to a conventional RAG model using vector-based approaches and potentially encapsulate this research into either a library or a scientific paper.
 
-Из актуальных задач:
-1. Генерация и сборка датасета для RAG
-  К сожалению до сих пор не собран достаточно приемлимый датасет для RAG, поэтому нам необходимо будет разработать его самим.
-2. Определение метрик для RAG
-3. Тестирование RAG в нескольких форматах включая Text-To-Cypher, и Semantic Search over Graph
+Among the current tasks:
 
+Dataset Generation and Compilation for RAG
+Unfortunately, a sufficiently acceptable dataset for RAG has not yet been gathered, so we will need to develop it ourselves.
+
+Metric Definition for RAG
+
+Testing RAG in various formats, including Text-To-Cypher and Semantic Search over Graph.
